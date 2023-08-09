@@ -96,36 +96,85 @@ const menuData = {
         description: "6 Snails, Dead",
         price: 16,
       },
+      {
+        name: "Grilled Spanish Octopus",
+        description: "",
+        price: 19,
+      },
+      {
+        name: "Bon Appetit Charcuterie",
+        description:
+          "An Assortment of Cheeses, Meats, Condiments, Fruits - Minimum of 2 People",
+        price: "14 Per Person",
+      },
+      {
+        name: "Seared Crab Cake",
+        description:
+          "Handmade, Seared in Butter, Mango Remoulade, Pistachio Crumb",
+        price: 24,
+      },
+      {
+        name: "New Orleans Style BBQ Shrimp",
+        description: "Pan Seared, Cajun BBQ Butter, Scallions",
+        price: 17,
+      },
     ],
     entrees: [
       {
-        name: "Grilled Salmon",
-        description:
-          "Fresh salmon fillet grilled to perfection, served with steamed vegetables.",
-        price: 18.99,
-        sides: ["Fingerling Potatoes", "Avocado Salsa"],
-      },
-      {
-        name: "Filet Mignon",
-        description:
-          "Tender filet mignon steak cooked to your preference, accompanied by garlic mashed potatoes.",
-        price: 24.99,
-        options: [
+        steaksAndChops: [
           {
-            name: "5oz Filet Mignon",
-            description:
-              "A 5oz cut of our tender filet mignon, perfectly cooked.",
-            price: 28.99,
-            sides: ["Garlic Mashed Potatoes", "Grilled Asparagus"],
-          },
-          {
-            name: "8oz Filet Mignon",
-            description:
-              "An 8oz cut of our tender filet mignon, cooked to perfection.",
-            price: 34.99,
-            sides: ["Garlic Mashed Potatoes", "Grilled Asparagus"],
+            name: "Filet Mignon",
+            options: [
+              {
+                name: "5oz Filet Mignon",
+                description:
+                  "A 5oz cut of our tender filet mignon, perfectly cooked.",
+                price: 42,
+                sides: ["Vegetable of the Day", "Potato of the Day"],
+              },
+              {
+                name: "8oz Filet Mignon",
+                description:
+                  "An 8oz cut of our tender filet mignon, cooked to perfection.",
+                price: 55,
+                sides: ["Vegetable of the Day", "Potato of the Day"],
+              },
+            ],
           },
         ],
+      },
+      {
+        bonAppetitClassics: [
+          {
+            name: "Grouper Bon Appetit",
+            description:
+              "Sauteed, Heirloom Tomatoes, Caper Berries, Feta, Lemon Butter Sauce",
+            price: 47,
+            sides: ["Fingerling Potatoes", "Cucumber Salad"],
+          },
+          {
+            name: "Dover Sole",
+            description:
+              "Lightly Sauteed in Lemon Butter, Toasted Almonds, Charred Lemon, Deboned Tableside",
+            price: 49,
+            sides: ["Fingerling Potatoes", "Vegetable of the Day"],
+          },
+          {
+            name: "Maple Sage Roasted Half Duckling",
+            description: "Half Duckling, All Dark Meat, Maple Sage Glaze",
+            price: 36,
+            sides: ["Fingerling Potatoes", "Sauteed Spinach"],
+          },
+          {
+            name: "Bouillabaisse",
+            description:
+              "Shrimp, Mussels, Scallops, Grouper in a Saffron Fumet, Grilled Baguette",
+            price: 42,
+          },
+        ],
+      },
+      {
+        composedSeasonalEntrees: [{}, {}, {}, {}, {}, {}, {}],
       },
     ],
     salads: [
@@ -180,7 +229,89 @@ const menuData = {
         name: "Burrata and Georgia Peach Salad",
         description: "",
         price: 18,
+        options: [
+          {
+            name: "Add Grilled Chicken",
+            price: 8,
+          },
+          {
+            name: "Add Grilled Salmon",
+            price: 8,
+          },
+          {
+            name: "Add Grilled Shrimp",
+            price: 12,
+          },
+          {
+            name: "Add Grouper",
+            price: 20,
+          },
+        ],
       },
+      {
+        name: "Classic Caesar Salad",
+        description:
+          "Croutons, White Anchovy, Parmesan Crisp, Housemade Dressing",
+        price: 15,
+        options: [
+          {
+            name: "Add Grilled Chicken",
+            price: 8,
+          },
+          {
+            name: "Add Grilled Salmon",
+            price: 8,
+          },
+          {
+            name: "Add Grilled Shrimp",
+            price: 12,
+          },
+          {
+            name: "Add Grouper",
+            price: 20,
+          },
+        ],
+      },
+      {
+        name: "Greek Salad",
+        description:
+          "Traditional Preparation, Onion, Housemade Potato Salad, Feta, White Anchovy",
+        price: 16,
+        options: [
+          {
+            name: "Add Grilled Chicken",
+            price: 8,
+          },
+          {
+            name: "Add Grilled Salmon",
+            price: 8,
+          },
+          {
+            name: "Add Grilled Shrimp",
+            price: 12,
+          },
+          {
+            name: "Add Grouper",
+            price: 20,
+          },
+        ],
+      },
+    ],
+    sides: [
+      {
+        name: "Vegetable of the Day",
+        description: "A Daily Selection of Mixed Vegetables",
+        price: 8,
+      },
+      {
+        name: "Potato of the Day",
+        description: "Chef Selection",
+        price: 8,
+      },
+      {},
+      {},
+      {},
+      {},
     ],
     desserts: [
       {

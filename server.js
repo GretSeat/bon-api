@@ -8,30 +8,16 @@ const menuData = {
     specials: {
       daily: [
         {
-          name: "Daily Pasta Delight",
-          description:
-            "Delicious pasta dish crafted by our chef using seasonal ingredients.",
-          price: 14.99,
-        },
-        {
-          name: "Catch of the Day",
-          description:
-            "Freshly caught seafood, grilled to perfection, and served with steamed vegetables.",
-          price: 17.99,
+          name: "",
+          description: "",
+          price: 0,
         },
       ],
       biweekly: [
         {
-          name: "Farm-to-Table Feast",
-          description:
-            "A rotating selection of dishes featuring locally sourced ingredients.",
-          price: 19.99,
-        },
-        {
-          name: "Savory Steak Sampler",
-          description:
-            "A trio of steak cuts, each prepared with a unique marinade and served with your choice of sides.",
-          price: 22.99,
+          name: "",
+          description: "",
+          price: 0,
         },
       ],
       seasonal: [
@@ -58,7 +44,7 @@ const menuData = {
         },
         {
           name: "Summer Specials",
-          description: "Specials that rotate daily",
+          description: "Specials that Rotate Daily",
           items: [
             {
               name: "Monday Special",
@@ -88,18 +74,19 @@ const menuData = {
     appetizers: [
       {
         name: "French Onion Soup",
-        description: "It's French Onion Soup",
+        description: "Caramelized Onions, Rich Broth, Swiss Cheese, Crouton",
         price: 10,
       },
       {
         name: "Classic Escargot",
-        description: "6 Snails, Dead",
+        description:
+          "Sweet Garlic, Butter, Herbs, Hint of Curry, Grilled Baguette. 6 to an order.",
         price: 16,
       },
       {
-        name: "Grilled Spanish Octopus",
-        description: "",
-        price: 19,
+        name: "Steamed Mussels",
+        description: "In White Wine Butter, Shallots, and Garlic Broth",
+        price: 16,
       },
       {
         name: "Bon Appetit Charcuterie",
@@ -118,10 +105,74 @@ const menuData = {
         description: "Pan Seared, Cajun BBQ Butter, Scallions",
         price: 17,
       },
+      {
+        name: "Lobster & Avocado Stack",
+        description:
+          "Fresh Mango, Toasted Pistachio, Cilantro, Chive Oil, Cognac Sauce",
+        price: 30,
+      },
+      {
+        name: "Sesame Crusted Ahi Tuna",
+        description: "Yuzu Ponzo, Wasabi Avocado Cream, Wonton Crisp",
+        price: 17,
+      },
+      {
+        name: "Grilled Spanish Octopus",
+        description:
+          "Pickled & Grilled, Served Chilledd Horiatiki Style Salad, Lemon Honey Vinaigrette",
+        price: 19,
+      },
+      {
+        name: "Classic Cold Smoked Salmon",
+        description:
+          "On Potato Pancakes with Apple Celery Slaw, Capers, Red Onion & Mustard Dill Dressing",
+        price: 18,
+      },
+      {
+        name: "Jumbo Shrimp Cocktail",
+        description: "Gin Coktail Sauce, Lemon, 6 to an Order",
+        price: 18,
+      },
+      {
+        name: "Half Shell Oysters",
+        description:
+          "Daily Selection, Gin Cocktail Sauce, Cucumber and Apple Mignonette",
+        options: [
+          {
+            name: "Half Dozen Oysters",
+            description: "6 Oysters",
+            price: "Market Price",
+          },
+          {
+            name: "Dozen Oysters",
+            description: "12 Oysters",
+            price: "Market Price",
+          },
+        ],
+      },
+      {
+        name: "Grand Seafood Tower",
+        description:
+          "Seasonal Inspiration by Our Chefs, but usually Lobster Tail, Oysters, Shrimp, Mussels, and Stone Crab Legs",
+        price: "Market Price",
+      },
     ],
     entrees: [
       {
         steaksAndChops: [
+          {
+            name: "Kona Crusted Ribeye (16oz)",
+            description: "Kona Coffee Rubbed, Congac Green Peppercorn Sauce",
+            sides: ["Vegetable of the Day", "Potato of the Day"],
+            price: 52,
+          },
+          {
+            name: "New York Strip (Oscar Style) (12oz)",
+            description:
+              "12oz Strip Steak, Lump Blue Crab, Asparagus, Bearnaise",
+            sides: ["Vegetable of the Day", "Potato of the Day"],
+            price: 54,
+          },
           {
             name: "Filet Mignon",
             options: [
@@ -138,6 +189,24 @@ const menuData = {
                   "An 8oz cut of our tender filet mignon, cooked to perfection.",
                 price: 55,
                 sides: ["Vegetable of the Day", "Potato of the Day"],
+              },
+            ],
+          },
+          {
+            name: "Pistachio Crusted Rack of Lamb",
+            description:
+              "Herb Marinated, Pistachio Crust, Lamb Demi Glaze, Homemade Mint Jelly",
+            sides: ["Fingerling Potatoes", "Vegetable of the Day"],
+            options: [
+              {
+                name: "Half Rack",
+                description: "4 Pieces of Lamb",
+                price: 38,
+              },
+              {
+                name: "Full Rack",
+                description: "8 Pieces of Lamb",
+                price: 54,
               },
             ],
           },
@@ -174,7 +243,52 @@ const menuData = {
         ],
       },
       {
-        composedSeasonalEntrees: [{}, {}, {}, {}, {}, {}, {}],
+        composedSeasonalEntrees: [
+          {
+            name: "Chicken with Red Wine Demi",
+            description:
+              "Peal Onions, Exotic Mushrooms, Red Wine Demi Glaze, Herbs",
+            sides: ["Vegetable of the Day", "Potato of the Day"],
+            price: 29,
+          },
+          {
+            name: "Pan Seared Scallops",
+            desription:
+              "Bronzed, Sweet Corn Broth, Crispy Panchetta, Fingerling Potatoes, Sauteed Spinach",
+            price: 48,
+          },
+          {
+            name: "Snapper and Crab Stirfry",
+            description:
+              "Stir Fried Mixed Asian Vegetables, with Lump Blue Crab, and Ginger Sake Glaze",
+            price: 42,
+          },
+          {
+            name: "Salmon Escabeche",
+            description: "Grilled Salmon, Topped with Olive Escabeche",
+            sides: ["Avocado Salsa", "Fingerling Potatoes"],
+            price: 36,
+          },
+          {
+            name: "Fettuccine Shrimp Pasta",
+            description:
+              "Fettuccine Pasta, Sherry Wine Cream Sauce, Asparagus Points, Heirloom Tomatoes",
+            price: 32,
+          },
+          {
+            name: "Grilled Cauliflower Picatta",
+            description:
+              "Steamed and Grilled Cauliflower, Caper Berries, Lemon Wine Sauce, Fingerling Potatoes, and Potato of the Day",
+            price: 28,
+          },
+          {
+            name: "Caribbean Lobster Tail",
+            description:
+              "Warm Water Tail, Broiled, Fluffed Out of the Shell, Served with Melted Butter and Lemon",
+            sides: ["Vegetable of the Day", "Potato of the Day"],
+            price: 55,
+          },
+        ],
       },
     ],
     salads: [
@@ -296,8 +410,101 @@ const menuData = {
           },
         ],
       },
+      {
+        name: "Small Classic Caesar Salad",
+        description:
+          "Croutons, White Anchovy, Parmesan Crisp, Housemade Dressing",
+        price: 8,
+        options: [
+          {
+            name: "Add Grilled Chicken",
+            price: 8,
+          },
+          {
+            name: "Add Grilled Salmon",
+            price: 8,
+          },
+          {
+            name: "Add Grilled Shrimp",
+            price: 12,
+          },
+          {
+            name: "Add Grouper",
+            price: 20,
+          },
+        ],
+      },
+      {
+        name: "House Salad",
+        description:
+          "Mixed Greens, Sunflower Seeds, Heirloom Tomatoes, Green Olives, Shaved Parmesan, Citrus Vinaigrette",
+        price: 6,
+        options: [
+          {
+            name: "Add Grilled Chicken",
+            price: 8,
+          },
+          {
+            name: "Add Grilled Salmon",
+            price: 8,
+          },
+          {
+            name: "Add Grilled Shrimp",
+            price: 12,
+          },
+          {
+            name: "Add Grouper",
+            price: 20,
+          },
+        ],
+      },
+    ],
+    lighterSelections: [
+      {
+        name: "Local Grouper Sandwich",
+        description:
+          "Lightly Dusted Grouper, Housemade Tartar, Lettuce, Tomato, Onion",
+        price: 25,
+      },
+      {
+        name: "The Cure Sandwich",
+        description: "Capicola, Sopressata, Swiss, Arugula, Garlic Aoili",
+        price: 19,
+      },
+      {
+        name: "Bistro Burger",
+        description:
+          "Red Wine Caramelized Onions, Bri Cheese, Garlic Aioli, Arugula",
+        price: 18,
+      },
+      {
+        name: "Maine Lobster Roll",
+        description:
+          "Open Faced Sourdough, Lettuce, Topped with Maine Lobster, and a Side of Fresh Seasonal Fruits and Berries",
+        price: 36,
+      },
     ],
     sides: [
+      {
+        name: "Truffle Pasta",
+        description: "Fettuccine Pasta Topped in Truffle Butter",
+        price: 12,
+      },
+      {
+        name: "Roasted Brussel Sprouts",
+        description: "Candied Bacon and Balsamic Glaze",
+        price: 9,
+      },
+      {
+        name: "Rockefeller Creamed Spinach",
+        description: "Sauteed Spinach, Cream, Parmesan, and Anise",
+        price: 12,
+      },
+      {
+        name: "Crab Stirfry",
+        description: "Blue Crab Meat, and Asian Veggies",
+        price: 18,
+      },
       {
         name: "Vegetable of the Day",
         description: "A Daily Selection of Mixed Vegetables",
@@ -308,21 +515,32 @@ const menuData = {
         description: "Chef Selection",
         price: 8,
       },
-      {},
-      {},
-      {},
-      {},
     ],
     desserts: [
+      {
+        name: "Key Lime Pie",
+        description: "",
+        price: 0,
+      },
       {
         name: "Creme Brulee",
         description: "It's like a custard",
         price: 8,
       },
       {
+        name: "Tiramisu",
+        description: "Tiramisu",
+        price: 5,
+      },
+      {
+        name: "Coconut Cream Pie",
+        description: "Coconut Cream Pie",
+        price: 0,
+      },
+      {
         name: "Chocolate Mousse",
         description: "Chocolate Sauce and Whipped Cream",
-        price: 5,
+        price: 0,
       },
     ],
   },

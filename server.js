@@ -30,15 +30,33 @@ const menuData = {
               name: "Lobster Bisque",
               description:
                 "Rich and creamy lobster soup with hints of sherry and aromatic spices.",
-              price: 9.99,
+              price: 12,
+            },
+            {
+              name: "Lobster Cocktail",
+              description:
+                "A Martini Glass Full of Lobster Meat, Served with Cognac Sauce",
+              price: 30,
             },
           ],
           entrees: [
             {
-              name: "Lobster Tail Entree",
+              name: "Lobster Wedget Salad",
               description:
-                "A hearty lobster tail served with garlic butter, accompanied by roasted vegetables.",
-              price: 32.99,
+                "A Refreshing Seasonal Salad with Succulent Lobster Meat, Crispy Bacon, and Smoked Bleu Cheese Crumbles",
+              price: 36,
+            },
+            {
+              name: "Lazy Man's Lobster Pasta",
+              description:
+                "Lobster Meat, De-shelled, with Truffle Butter, Asparagus, and Served over a bed of Angel Hair Pasta",
+              price: 38,
+            },
+            {
+              name: "Baked Shrimp Stuffed Lobster",
+              description:
+                "Pound and a Quarter Lobster, Baked, Stuffed with Shrimp, served with Grilled Corn on the Cob, and Red-Skin Potato",
+              price: 58,
             },
           ],
         },
@@ -520,7 +538,7 @@ const menuData = {
       {
         name: "Key Lime Pie",
         description: "",
-        price: 0,
+        price: 8,
       },
       {
         name: "Creme Brulee",
@@ -530,17 +548,17 @@ const menuData = {
       {
         name: "Tiramisu",
         description: "Tiramisu",
-        price: 5,
+        price: 8,
       },
       {
         name: "Coconut Cream Pie",
         description: "Coconut Cream Pie",
-        price: 0,
+        price: 8,
       },
       {
         name: "Chocolate Mousse",
         description: "Chocolate Sauce and Whipped Cream",
-        price: 0,
+        price: 8,
       },
     ],
   },

@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-const PORT = 3002;
+const PORT = 1480;
 
 const menuData = {
   menu: {
@@ -578,11 +578,11 @@ app.get("/api/menu", (req, res) => {
 
 app.get("/api/menu/:courseType", (req, res) => {
   const courseTypes = req.params.courseType.toLowerCase();
-  if (menuData.menu[courseTypes]) {
-    res.json(menuData.menu[courseTypes]);
-  }
+  menuData.menu[courseTypes]
+    ? res.json(menuData.menu[courseTypes])
+    : res.json(menuData.menu);
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is Running on Port:${PORT}!`);
+  console.log(`Server is Running on Port: ${PORT}!`);
 });

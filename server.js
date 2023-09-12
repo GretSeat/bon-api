@@ -4,7 +4,7 @@ const app = express();
 const PORT = 1480;
 
 const menuData = {
-  menu: {
+  foodMenu: {
     specials: {
       daily: [
         {
@@ -562,6 +562,13 @@ const menuData = {
       },
     ],
   },
+  drinkMenu: {
+    specials: {
+      name: "",
+      description: "",
+      price: 0,
+    },
+  },
 };
 
 app.get("/", (req, res) => {
@@ -572,15 +579,19 @@ app.get("/api", (req, res) => {
   res.json(menuData);
 });
 
-app.get("/api/menu", (req, res) => {
-  res.json(menuData.menu);
+app.get("/api/foodMenu", (req, res) => {
+  res.json(menuData.foodMenu);
 });
 
-app.get("/api/menu/:courseType", (req, res) => {
+app.get("/api/foodMenu/:courseType", (req, res) => {
   const courseTypes = req.params.courseType.toLowerCase();
-  menuData.menu[courseTypes]
-    ? res.json(menuData.menu[courseTypes])
-    : res.json(menuData.menu);
+  menuData.foodMenu[courseTypes]
+    ? res.json(menuData.foodMenu[courseTypes])
+    : res.json(menuData.foodMenu);
+});
+
+app.get("/api/drinkMenu", (req, res) => {
+  res.json(menuData.drinkMenu);
 });
 
 app.listen(PORT, () => {

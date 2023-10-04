@@ -571,6 +571,9 @@ const menuData = {
   },
 };
 
+// apply express.json middleware
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
@@ -594,6 +597,8 @@ app.get("/api/drinkMenu", (req, res) => {
   res.json(menuData.drinkMenu);
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is Running on Port: ${PORT}!`);
+const port = process.env.PORT || 1480;
+
+app.listen(port, () => {
+  console.log(`Server is Running on http://localhost:${port}`);
 });
